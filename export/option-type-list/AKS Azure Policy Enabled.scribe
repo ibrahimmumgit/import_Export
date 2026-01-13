@@ -1,0 +1,6 @@
+resource "option-type-list" "AKS Azure Policy Enabled" {
+  name = "AKS Azure Policy Enabled"
+  uuid = "adef9775-2726-450c-811c-e947d3b4ee09"
+  initialDataset = "[{\"name\":\"true\",\"value\":\"true\"},{\"name\":\"false\",\"value\":\"false\"}]"
+  type = "manual"
+}
