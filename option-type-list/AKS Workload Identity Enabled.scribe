@@ -1,6 +1,0 @@
-resource "option-type-list" "AKS Workload Identity Enabled" {
-  name = "AKS Workload Identity Enabled"
-  uuid = "44046fb0-e860-4748-b39a-0dbc163f1d90"
-  initialDataset = "[{\"name\":\"true\",\"value\":\"true\"},{\"name\":\"false\",\"value\":\"false\"}]"
-  type = "manual"
-}
