@@ -1,0 +1,10 @@
+resource "option-type-list" "Enable Disable" {
+  name = "Enable Disable"
+  uuid = "f1d93004-ec3e-4a7d-bf18-8f992b9409da"
+  initialDataset = <<EOFSCRIBE
+Enable,true
+Disable,false
+EOFSCRIBE
+  type = "manual"
+  visibility = "public"
+}

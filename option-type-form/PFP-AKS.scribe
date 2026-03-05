@@ -1,0 +1,357 @@
+resource "option-type-form" "PFP-AKS" {
+  code = "PFP-AKS"
+  name = "Petronas-AKS Cluster"
+  uuid = "7e90e977-7203-452c-8bf1-19a8d60f74b2"
+  config = {
+    enableVar = false
+    form = ""
+    formField = ""
+    formOptions = ""
+    formType = "static"
+  }
+  field-groups = [
+    {
+      code = "e0f15892-b46e-4443-b4a9-efca26e279ad"
+      name = "Project Details"
+      collapsible = false
+      defaultCollapsed = false
+      options = [
+        {
+          code = "09d487a5-82c0-4004-a144-17a80da5b245"
+          name = "09d487a5-82c0-4004-a144-17a80da5b245"
+          uuid = "96d3b65d-eb53-411f-a3b4-5d4305cc14eb"
+          config = {
+            addon = ""
+            addonPosition = "right"
+            cloudType = ""
+            filterResource = false
+            group = ""
+            groupFieldType = "field"
+            groupId = ""
+            instanceTypeCode = ""
+            instanceTypeFieldCode = ""
+            instanceTypeFieldType = "field"
+          }
+          defaultValue = "1951"
+          fieldContext = "config.customOptions"
+          fieldLabel = "Group"
+          fieldName = "input1"
+          formField = true
+          refCode = "09d487a5-82c0-4004-a144-17a80da5b245"
+          type = "group"
+        },
+        {
+          code = "40072cec-620d-498c-96ba-5c362ebedb6b"
+          name = "40072cec-620d-498c-96ba-5c362ebedb6b"
+          uuid = "9b7bb8d0-404f-4097-b6a3-f91aaec2c790"
+          config = {
+            cloudType = 18
+            filterResource = false
+            group = "09d487a5-82c0-4004-a144-17a80da5b245"
+            groupFieldType = "field"
+            groupId = ""
+            instanceTypeCode = ""
+            instanceTypeFieldCode = ""
+            instanceTypeFieldType = "field"
+          }
+          displayOrder = 1
+          fieldContext = "config.customOptions"
+          fieldLabel = "Cloud"
+          fieldName = "input2"
+          formField = true
+          refCode = "40072cec-620d-498c-96ba-5c362ebedb6b"
+          type = "cloud"
+        },
+        {
+          code = "0bc072c3-ba65-4eb0-9f0c-e018d5a70555"
+          name = "0bc072c3-ba65-4eb0-9f0c-e018d5a70555"
+          uuid = "7bca6bf2-6d22-4f0f-bd62-f30ad814327e"
+          displayOrder = 2
+          fieldContext = "config.customOptions"
+          fieldLabel = "Resource Group"
+          fieldName = "input3"
+          formField = true
+          optionList = { name = "yes or no" }
+          optionSource = "list"
+          refCode = "0bc072c3-ba65-4eb0-9f0c-e018d5a70555"
+          type = "radio"
+        },
+        {
+          code = "f5c60424-022f-4a77-8649-f5b9ea20dfae"
+          name = "f5c60424-022f-4a77-8649-f5b9ea20dfae"
+          uuid = "8f2b0939-ab96-4292-a7b7-a674b5bb41a9"
+          config = {
+            cloudField = "40072cec-620d-498c-96ba-5c362ebedb6b"
+            cloudFieldType = "field"
+            cloudId = ""
+            defaultValue = ""
+            groupField = "09d487a5-82c0-4004-a144-17a80da5b245"
+            groupFieldType = "field"
+            groupId = ""
+            layoutField = ""
+            layoutFieldType = "field"
+            layoutId = ""
+            multiSelect = false
+            planField = ""
+            planFieldType = "field"
+            planId = ""
+            sortable = false
+          }
+          dependsOnCode = "input2"
+          displayOrder = 3
+          fieldContext = "config.customOptions"
+          fieldLabel = "Existing Resource Group Name"
+          fieldName = "input5"
+          formField = true
+          optionList = { name = "resourse pool option list" }
+          optionSource = "list"
+          refCode = "f5c60424-022f-4a77-8649-f5b9ea20dfae"
+          type = "select"
+          visibleOnCode = "input3:(no)"
+        },
+        {
+          code = "4a509f62-84db-4f06-be3f-be057fa1ebe3"
+          name = "4a509f62-84db-4f06-be3f-be057fa1ebe3"
+          uuid = "573a66b3-6af8-4464-a5a0-2a0f8910e097"
+          displayOrder = 4
+          fieldContext = "config.customOptions"
+          fieldLabel = "Project Name"
+          fieldName = "input4"
+          formField = true
+          refCode = "4a509f62-84db-4f06-be3f-be057fa1ebe3"
+        },
+        {
+          code = "ea996d3e-e64f-4bb9-8c83-7891e616675a"
+          name = "ea996d3e-e64f-4bb9-8c83-7891e616675a"
+          uuid = "f9fe8cfc-e9f8-4a6f-821b-f699b7efa9f3"
+          config = {
+            defaultValue = ""
+            multiSelect = false
+            sortable = false
+          }
+          displayOrder = 5
+          fieldContext = "config.customOptions"
+          fieldLabel = "Location"
+          fieldName = "input6"
+          formField = true
+          optionList = { name = "az cloud locations" }
+          optionSource = "list"
+          refCode = "ea996d3e-e64f-4bb9-8c83-7891e616675a"
+          type = "select"
+        },
+        {
+          code = "d5af7529-8709-476a-94eb-8331b7c047bd"
+          name = "d5af7529-8709-476a-94eb-8331b7c047bd"
+          uuid = "a068f60a-ee07-4833-b46d-c2988cf52510"
+          config = {
+            addon = ""
+            addonPosition = "right"
+            defaultValue = ""
+            multiSelect = false
+            sortable = false
+          }
+          displayOrder = 6
+          fieldContext = "config.customOptions"
+          fieldLabel = "Environment"
+          fieldName = "input7"
+          formField = true
+          optionList = { name = "Environment" }
+          optionSource = "list"
+          refCode = "d5af7529-8709-476a-94eb-8331b7c047bd"
+          type = "select"
+        }
+      ]
+    },
+    {
+      code = "72a10343-d860-42aa-9929-3ec5fab2d4fc"
+      name = "Cluster Details"
+      collapsible = false
+      defaultCollapsed = false
+      options = [
+        {
+          code = "b8ed27d7-11bf-4915-9110-825c10cbe481"
+          name = "b8ed27d7-11bf-4915-9110-825c10cbe481"
+          uuid = "cffea6d6-1d9f-43cf-9201-193a38921f16"
+          config = {
+            addon = ""
+            addonPosition = "right"
+            defaultValue = ""
+            multiSelect = false
+            sortable = false
+          }
+          fieldContext = "config.customOptions"
+          fieldLabel = "Kubernetes Version"
+          fieldName = "input13"
+          formField = true
+          optionList = { name = "AKS Version" }
+          optionSource = "list"
+          refCode = "b8ed27d7-11bf-4915-9110-825c10cbe481"
+          type = "select"
+        },
+        {
+          code = "3fc3e89b-08af-4027-885c-3ed0a638813c"
+          name = "3fc3e89b-08af-4027-885c-3ed0a638813c"
+          uuid = "a4ba4375-d8ce-45e3-97d6-66e87338ab93"
+          config = {
+            addon = ""
+            addonPosition = "right"
+            defaultValue = ""
+            multiSelect = false
+            sortable = false
+          }
+          displayOrder = 1
+          fieldContext = "config.customOptions"
+          fieldLabel = "AKS Tier"
+          fieldName = "input8"
+          formField = true
+          helpBlock = "Shared (one service plan will be created and mapped to all) Separate (Separate service plans will be created for each)"
+          optionList = { name = "App service plan size" }
+          optionSource = "list"
+          refCode = "3fc3e89b-08af-4027-885c-3ed0a638813c"
+          type = "select"
+        },
+        {
+          code = "695025a7-ed75-4629-8b54-bdccef8a4a32"
+          name = "695025a7-ed75-4629-8b54-bdccef8a4a32"
+          uuid = "743341a8-b3cc-4b8c-88b7-ac3e2ce6f77f"
+          config = {
+            addon = ""
+            addonPosition = "right"
+            defaultValue = ""
+            multiSelect = false
+            sortable = false
+          }
+          displayOrder = 2
+          fieldContext = "config.customOptions"
+          fieldLabel = "Node VM Size"
+          fieldName = "input14"
+          formField = true
+          optionList = { name = "Az Service plan" }
+          optionSource = "list"
+          refCode = "695025a7-ed75-4629-8b54-bdccef8a4a32"
+          type = "select"
+        },
+        {
+          code = "03038844-5317-4c53-8e25-cf9d68747123"
+          name = "03038844-5317-4c53-8e25-cf9d68747123"
+          uuid = "84b21459-b744-4da4-9bf1-bbfc90689e14"
+          config = { step = 1 }
+          displayOrder = 3
+          fieldContext = "config.customOptions"
+          fieldLabel = "Node Count"
+          fieldName = "input16"
+          formField = true
+          refCode = "03038844-5317-4c53-8e25-cf9d68747123"
+          type = "number"
+        },
+        {
+          code = "f1de0b21-6ef7-462b-912e-037469e49ece"
+          name = "f1de0b21-6ef7-462b-912e-037469e49ece"
+          uuid = "4baf373e-7deb-4a27-bdb5-a89d1b4118fc"
+          config = {
+            defaultValue = ""
+            multiSelect = false
+            sortable = false
+          }
+          displayOrder = 4
+          fieldContext = "config.customOptions"
+          fieldLabel = "Node Pool Name"
+          fieldName = "input15"
+          formField = true
+          optionList = { name = "App service plan size" }
+          optionSource = "list"
+          refCode = "f1de0b21-6ef7-462b-912e-037469e49ece"
+        },
+        {
+          code = "484d477b-89c4-438b-9328-137d5b1f95c2"
+          name = "484d477b-89c4-438b-9328-137d5b1f95c2"
+          uuid = "1fddada0-0601-4d71-81fa-cab07486187e"
+          displayOrder = 5
+          fieldContext = "config.customOptions"
+          fieldLabel = "Node Pool Labels"
+          fieldName = "input19"
+          formField = true
+        },
+        {
+          code = "9d770800-c932-4e79-9e4d-098779c4c145"
+          name = "9d770800-c932-4e79-9e4d-098779c4c145"
+          uuid = "10a10655-b3a7-4e59-b484-86d116e70364"
+          config = {
+            addon = ""
+            addonPosition = "right"
+            defaultValue = ""
+            multiSelect = false
+            sortable = false
+          }
+          displayOrder = 6
+          fieldContext = "config.customOptions"
+          fieldLabel = "Network Policy"
+          fieldName = "input21"
+          formField = true
+          optionList = { name = "Az network policy" }
+          refCode = "9d770800-c932-4e79-9e4d-098779c4c145"
+          type = "select"
+        },
+        {
+          code = "9a9a6e92-bb9d-4d61-ad9b-3d1623823e01"
+          name = "9a9a6e92-bb9d-4d61-ad9b-3d1623823e01"
+          uuid = "6cf80846-b863-41d2-9f0d-fa5b7ab49090"
+          config = {
+            defaultValue = ""
+            multiSelect = false
+            sortable = false
+          }
+          displayOrder = 7
+          fieldContext = "config.customOptions"
+          fieldLabel = "Enable RBAC"
+          fieldName = "input22"
+          formField = true
+          optionList = { name = "Enable Disable" }
+          type = "radio"
+        },
+        {
+          code = "8d1e38f7-6a9c-4df8-822f-2fc3d0b082bf"
+          name = "8d1e38f7-6a9c-4df8-822f-2fc3d0b082bf"
+          uuid = "0b6c8001-53fa-423a-999a-13569abb54a5"
+          displayOrder = 8
+          fieldContext = "config.customOptions"
+          fieldLabel = "Group Name"
+          fieldName = "input23"
+          formField = true
+          visibleOnCode = "input22:(enable)"
+        },
+        {
+          code = "c512d8f1-4b6d-45d9-a9fc-44c8ff0f2b2d"
+          name = "c512d8f1-4b6d-45d9-a9fc-44c8ff0f2b2d"
+          uuid = "b9a6c79e-874c-4d8b-a97a-9dc06abaf3c4"
+          config = { separator = "," }
+          displayOrder = 9
+          fieldContext = "config.customOptions"
+          fieldLabel = "Auto-Scaler Profile"
+          fieldName = "input24"
+          formField = true
+          type = "textArray"
+        }
+      ]
+    },
+    {
+      code = "544f97c3-8ca1-469e-86ac-44d797abc17e"
+      name = "Access"
+      collapsible = false
+      defaultCollapsed = false
+      options = [
+        {
+          code = "6f242fef-4d46-4c5b-8c3e-5358f3d5e8e6"
+          name = "6f242fef-4d46-4c5b-8c3e-5358f3d5e8e6"
+          uuid = "0533706c-7881-4a59-90a5-c4d8c804e980"
+          config = { addon = "", addonPosition = "right" }
+          fieldContext = "config.customOptions"
+          fieldLabel = "Group Name"
+          fieldName = "input18"
+          formField = true
+          refCode = "6f242fef-4d46-4c5b-8c3e-5358f3d5e8e6"
+        }
+      ]
+    }
+  ]
+}

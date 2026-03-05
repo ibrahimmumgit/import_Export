@@ -1,0 +1,9 @@
+resource "option-type-list" "Az network policy" {
+  name = "Az network policy"
+  uuid = "d8865833-356b-4e59-8ecf-7f88d2443e0f"
+  initialDataset = <<EOFSCRIBE
+Calico,calico
+Azure,azure
+EOFSCRIBE
+  type = "manual"
+}

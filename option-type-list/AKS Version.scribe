@@ -1,0 +1,10 @@
+resource "option-type-list" "AKS Version" {
+  name = "AKS Version"
+  uuid = "b32df576-33b9-4230-8dd7-d9f4078350e2"
+  initialDataset = <<EOFSCRIBE
+'1.29.0','1.29.0'
+'1.28.0','1.28.0'
+EOFSCRIBE
+  type = "manual"
+  visibility = "public"
+}
