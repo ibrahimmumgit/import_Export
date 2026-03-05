@@ -1,0 +1,378 @@
+resource "option-type-form" "PFP-windowsVM" {
+  code = "PFP-windowsVM"
+  name = "Petronas-Windows VM"
+  uuid = "bdacf417-c3e2-4794-b654-5414e3e26be6"
+  config = {
+    enableVar = false
+    form = ""
+    formField = ""
+    formOptions = ""
+    formType = "static"
+  }
+  field-groups = [
+    {
+      code = "e0f15892-b46e-4443-b4a9-efca26e279ad"
+      name = "Project Details"
+      collapsible = false
+      defaultCollapsed = false
+      options = [
+        {
+          code = "09d487a5-82c0-4004-a144-17a80da5b245"
+          name = "09d487a5-82c0-4004-a144-17a80da5b245"
+          uuid = "3aa30d1f-e48f-4e10-b073-f6a58b656e67"
+          config = {
+            addon = ""
+            addonPosition = "right"
+            cloudType = ""
+            filterResource = false
+            group = ""
+            groupFieldType = "field"
+            groupId = ""
+            instanceTypeCode = ""
+            instanceTypeFieldCode = ""
+            instanceTypeFieldType = "field"
+          }
+          defaultValue = "1951"
+          fieldContext = "config.customOptions"
+          fieldLabel = "Group"
+          fieldName = "input1"
+          formField = true
+          refCode = "09d487a5-82c0-4004-a144-17a80da5b245"
+          type = "group"
+        },
+        {
+          code = "40072cec-620d-498c-96ba-5c362ebedb6b"
+          name = "40072cec-620d-498c-96ba-5c362ebedb6b"
+          uuid = "1ff005e7-e337-45bb-abc1-3070d37351b8"
+          config = {
+            cloudType = 18
+            filterResource = false
+            group = "09d487a5-82c0-4004-a144-17a80da5b245"
+            groupFieldType = "field"
+            groupId = ""
+            instanceTypeCode = ""
+            instanceTypeFieldCode = ""
+            instanceTypeFieldType = "field"
+          }
+          displayOrder = 1
+          fieldContext = "config.customOptions"
+          fieldLabel = "Cloud"
+          fieldName = "input2"
+          formField = true
+          refCode = "40072cec-620d-498c-96ba-5c362ebedb6b"
+          type = "cloud"
+        },
+        {
+          code = "0bc072c3-ba65-4eb0-9f0c-e018d5a70555"
+          name = "0bc072c3-ba65-4eb0-9f0c-e018d5a70555"
+          uuid = "04cb1551-1c10-472b-9392-bc6472141397"
+          displayOrder = 2
+          fieldContext = "config.customOptions"
+          fieldLabel = "Resource Group"
+          fieldName = "input3"
+          formField = true
+          optionList = { name = "yes or no" }
+          optionSource = "list"
+          refCode = "0bc072c3-ba65-4eb0-9f0c-e018d5a70555"
+          type = "radio"
+        },
+        {
+          code = "f5c60424-022f-4a77-8649-f5b9ea20dfae"
+          name = "f5c60424-022f-4a77-8649-f5b9ea20dfae"
+          uuid = "03adbe6e-7d0e-4487-9b94-30868eda881b"
+          config = {
+            cloudField = "40072cec-620d-498c-96ba-5c362ebedb6b"
+            cloudFieldType = "field"
+            cloudId = ""
+            defaultValue = ""
+            groupField = "09d487a5-82c0-4004-a144-17a80da5b245"
+            groupFieldType = "field"
+            groupId = ""
+            layoutField = ""
+            layoutFieldType = "field"
+            layoutId = ""
+            multiSelect = false
+            planField = ""
+            planFieldType = "field"
+            planId = ""
+            sortable = false
+          }
+          dependsOnCode = "input2"
+          displayOrder = 3
+          fieldContext = "config.customOptions"
+          fieldLabel = "Existing Resource Group Name"
+          fieldName = "input5"
+          formField = true
+          optionList = { name = "resourse pool option list" }
+          optionSource = "list"
+          refCode = "f5c60424-022f-4a77-8649-f5b9ea20dfae"
+          type = "select"
+          visibleOnCode = "input3:(no)"
+        },
+        {
+          code = "4a509f62-84db-4f06-be3f-be057fa1ebe3"
+          name = "4a509f62-84db-4f06-be3f-be057fa1ebe3"
+          uuid = "73693b52-ea0b-494f-bfb2-bbf29a4ccc91"
+          displayOrder = 4
+          fieldContext = "config.customOptions"
+          fieldLabel = "Project Name"
+          fieldName = "input4"
+          formField = true
+          refCode = "4a509f62-84db-4f06-be3f-be057fa1ebe3"
+        },
+        {
+          code = "ea996d3e-e64f-4bb9-8c83-7891e616675a"
+          name = "ea996d3e-e64f-4bb9-8c83-7891e616675a"
+          uuid = "76cff4a0-015a-4b80-8917-a684211117f6"
+          config = {
+            defaultValue = ""
+            multiSelect = false
+            sortable = false
+          }
+          displayOrder = 5
+          fieldContext = "config.customOptions"
+          fieldLabel = "Location"
+          fieldName = "input6"
+          formField = true
+          optionList = { name = "az cloud locations" }
+          optionSource = "list"
+          refCode = "ea996d3e-e64f-4bb9-8c83-7891e616675a"
+          type = "select"
+        },
+        {
+          code = "d5af7529-8709-476a-94eb-8331b7c047bd"
+          name = "d5af7529-8709-476a-94eb-8331b7c047bd"
+          uuid = "5d4e05de-b012-4858-99ab-9fd4a43e16c6"
+          config = {
+            addon = ""
+            addonPosition = "right"
+            defaultValue = ""
+            multiSelect = false
+            sortable = false
+          }
+          displayOrder = 6
+          fieldContext = "config.customOptions"
+          fieldLabel = "Environment"
+          fieldName = "input7"
+          formField = true
+          optionList = { name = "Environment" }
+          optionSource = "list"
+          refCode = "d5af7529-8709-476a-94eb-8331b7c047bd"
+          type = "select"
+        }
+      ]
+    },
+    {
+      code = "72a10343-d860-42aa-9929-3ec5fab2d4fc"
+      name = "Instance Details"
+      collapsible = false
+      defaultCollapsed = false
+      options = [
+        {
+          code = "b8ed27d7-11bf-4915-9110-825c10cbe481"
+          name = "b8ed27d7-11bf-4915-9110-825c10cbe481"
+          uuid = "cbec1188-860a-44a8-bf97-1cb279c5705a"
+          fieldContext = "config.customOptions"
+          fieldLabel = "VM Name"
+          fieldName = "input13"
+          formField = true
+          refCode = "b8ed27d7-11bf-4915-9110-825c10cbe481"
+        },
+        {
+          code = "3fc3e89b-08af-4027-885c-3ed0a638813c"
+          name = "3fc3e89b-08af-4027-885c-3ed0a638813c"
+          uuid = "44bee821-3d2a-4bd8-aef3-80c735784d13"
+          config = {
+            addon = ""
+            addonPosition = "right"
+            cloudField = "40072cec-620d-498c-96ba-5c362ebedb6b"
+            cloudFieldType = "field"
+            cloudId = ""
+            defaultValue = ""
+            diskField = ""
+            groupField = ""
+            groupFieldType = "field"
+            groupId = ""
+            layoutField = ""
+            layoutFieldType = "field"
+            layoutId = ""
+            multiSelect = false
+            poolField = ""
+            poolFieldType = "field"
+            poolId = ""
+            showPricing = false
+            sortable = false
+          }
+          dependsOnCode = "input2"
+          displayOrder = 1
+          fieldContext = "config.customOptions"
+          fieldLabel = "VM Size"
+          fieldName = "input8"
+          formField = true
+          optionList = { name = "Az Service plan" }
+          optionSource = "list"
+          refCode = "3fc3e89b-08af-4027-885c-3ed0a638813c"
+          type = "select"
+        },
+        {
+          code = "8977e4cc-669d-42ac-b74c-c2e0af652f6d"
+          name = "8977e4cc-669d-42ac-b74c-c2e0af652f6d"
+          uuid = "dfa8be40-a7af-4a14-a712-26a52f674952"
+          config = {
+            addon = ""
+            addonPosition = "right"
+            defaultValue = ""
+            multiSelect = false
+            sortable = false
+          }
+          displayOrder = 2
+          fieldContext = "config.customOptions"
+          fieldLabel = "Image"
+          fieldName = "input9"
+          formField = true
+          optionList = { name = "Az Image" }
+          optionSource = "list"
+          refCode = "8977e4cc-669d-42ac-b74c-c2e0af652f6d"
+          type = "select"
+        },
+        {
+          code = "03038844-5317-4c53-8e25-cf9d68747123"
+          name = "03038844-5317-4c53-8e25-cf9d68747123"
+          uuid = "70420764-816f-4549-ab02-ad98f15a1310"
+          config = { addon = "", addonPosition = "right" }
+          displayOrder = 3
+          fieldContext = "config.customOptions"
+          fieldLabel = "Admin Username"
+          fieldName = "input16"
+          formField = true
+          refCode = "03038844-5317-4c53-8e25-cf9d68747123"
+        },
+        {
+          code = "f1de0b21-6ef7-462b-912e-037469e49ece"
+          name = "f1de0b21-6ef7-462b-912e-037469e49ece"
+          uuid = "db73a4a4-911b-443d-a4d9-d7c145b61abc"
+          config = {
+            canPeek = false
+            defaultValue = ""
+            multiSelect = false
+            sortable = false
+          }
+          displayOrder = 4
+          fieldContext = "config.customOptions"
+          fieldLabel = "Admin Password"
+          fieldName = "input15"
+          formField = true
+          optionList = { name = "App service plan size" }
+          optionSource = "list"
+          refCode = "f1de0b21-6ef7-462b-912e-037469e49ece"
+          type = "password"
+        },
+        {
+          code = "9366d908-7466-4126-8ee1-e1b96badf83e"
+          name = "9366d908-7466-4126-8ee1-e1b96badf83e"
+          uuid = "f2b7485e-3d2d-47fa-8494-dfeafe819a22"
+          displayOrder = 5
+          fieldContext = "config.customOptions"
+          fieldLabel = "OS Disk Name"
+          fieldName = "input14"
+          formField = true
+        },
+        {
+          code = "7d3b5199-af05-44ab-87b5-f8132507595d"
+          name = "7d3b5199-af05-44ab-87b5-f8132507595d"
+          uuid = "6f143abe-38b0-456c-a89f-e8d154028927"
+          config = {
+            defaultValue = ""
+            multiSelect = false
+            sortable = false
+          }
+          displayOrder = 6
+          fieldContext = "config.customOptions"
+          fieldLabel = "OS Disk Storage Type"
+          fieldName = "input17"
+          formField = true
+          optionList = { name = "App service plan size" }
+          type = "select"
+        },
+        {
+          code = "4e274844-e1e2-4421-9b84-e45384b5a065"
+          name = "4e274844-e1e2-4421-9b84-e45384b5a065"
+          uuid = "dc4ecc17-cb7a-483e-953c-52ad371d1af5"
+          config = { step = 1 }
+          defaultValue = "1"
+          displayOrder = 7
+          fieldContext = "config.customOptions"
+          fieldLabel = "Number of Data Disk"
+          fieldName = "input19"
+          formField = true
+          maxVal = 4
+          minVal = 1
+          type = "number"
+        },
+        {
+          code = "e3b55cca-243a-4c98-9975-4277858b7d8f"
+          name = "e3b55cca-243a-4c98-9975-4277858b7d8f"
+          uuid = "014e61b0-a5ca-4296-b258-0be6d18bae98"
+          displayOrder = 8
+          fieldContext = "config.customOptions"
+          fieldLabel = "Data Disk Name"
+          fieldName = "input20"
+          formField = true
+        },
+        {
+          code = "68385581-c0b3-4c80-8f28-e375c4cc51b7"
+          name = "68385581-c0b3-4c80-8f28-e375c4cc51b7"
+          uuid = "274786cd-86f4-4977-8d89-1ee8aaad48e4"
+          config = {
+            defaultValue = ""
+            multiSelect = false
+            sortable = false
+          }
+          displayOrder = 9
+          fieldContext = "config.customOptions"
+          fieldLabel = "Data Disk Storage Type"
+          fieldName = "input21"
+          formField = true
+          optionList = { name = "App service plan size" }
+          type = "select"
+        },
+        {
+          code = "347206c9-90f9-4924-b947-2b8f821cef34"
+          name = "347206c9-90f9-4924-b947-2b8f821cef34"
+          uuid = "313236e6-3cd8-429a-9c18-6f27ef1dd814"
+          config = {
+            display = ""
+            lang = ""
+            lockDisplay = false
+            showLineNumbers = true
+          }
+          displayOrder = 10
+          fieldContext = "config.customOptions"
+          fieldLabel = "Data Disk Size"
+          fieldName = "input22"
+          formField = true
+          type = "byteSize"
+        }
+      ]
+    },
+    {
+      code = "544f97c3-8ca1-469e-86ac-44d797abc17e"
+      name = "Access"
+      collapsible = false
+      defaultCollapsed = false
+      options = [
+        {
+          code = "6f242fef-4d46-4c5b-8c3e-5358f3d5e8e6"
+          name = "6f242fef-4d46-4c5b-8c3e-5358f3d5e8e6"
+          uuid = "ba738a3c-7921-4070-81a1-fc192b839c3f"
+          config = { addon = "", addonPosition = "right" }
+          fieldContext = "config.customOptions"
+          fieldLabel = "Group Name"
+          fieldName = "input18"
+          formField = true
+          refCode = "6f242fef-4d46-4c5b-8c3e-5358f3d5e8e6"
+        }
+      ]
+    }
+  ]
+}
