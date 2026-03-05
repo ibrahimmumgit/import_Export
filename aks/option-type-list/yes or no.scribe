@@ -1,0 +1,10 @@
+resource "option-type-list" "yes or no" {
+  name = "yes or no"
+  uuid = "dcd00efc-3354-4085-80a9-c5f4eba77593"
+  initialDataset = <<EOFSCRIBE
+New,true
+Existing,false
+EOFSCRIBE
+  type = "manual"
+  visibility = "public"
+}

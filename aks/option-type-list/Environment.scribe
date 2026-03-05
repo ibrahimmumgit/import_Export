@@ -1,0 +1,11 @@
+resource "option-type-list" "Environment" {
+  name = "Environment"
+  uuid = "b07be3ce-dc75-4a02-aa02-a5f4806652c5"
+  initialDataset = <<EOFSCRIBE
+Dev,Dev
+UAT,uat
+PROD,prod
+EOFSCRIBE
+  type = "manual"
+  visibility = "public"
+}
