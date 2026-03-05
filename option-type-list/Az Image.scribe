@@ -1,0 +1,9 @@
+resource "option-type-list" "Az Image" {
+  name = "Az Image"
+  uuid = "f7e6007f-4f34-453f-9991-6cdc53179f28"
+  initialDataset = <<EOFSCRIBE
+Win2019,win2019
+sql2019,sql2019
+EOFSCRIBE
+  type = "manual"
+}

@@ -1,0 +1,17 @@
+resource "option-type-list" "resourse pool option list" {
+  name = "resourse pool option list"
+  uuid = "6e68a257-0ed6-47d4-ac23-f4b151d04445"
+  apiType = "resourcePools"
+  labels = [ "Aleks" ]
+  realTime = true
+  requestScript = <<EOFSCRIBE
+results.siteId = input.input1
+results.zoneId = input.input2
+EOFSCRIBE
+  translationScript = <<EOFSCRIBE
+for (var x = 0; x < data.length; x++) {
+results.push({name:data[x].name, value:data[x].name});
+}
+EOFSCRIBE
+  type = "api"
+}

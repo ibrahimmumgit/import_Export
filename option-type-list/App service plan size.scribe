@@ -1,0 +1,9 @@
+resource "option-type-list" "App service plan size" {
+  name = "App service plan size"
+  uuid = "931f833b-ad2c-43f6-b295-792e156c3e15"
+  initialDataset = <<EOFSCRIBE
+Standard,Standard
+Premium,Preminum
+EOFSCRIBE
+  type = "manual"
+}
